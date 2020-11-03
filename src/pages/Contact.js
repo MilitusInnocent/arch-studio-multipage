@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactHero, ContactDetails, /*ContactForm*/ } from '../components';
+import { ContactHero, ContactDetails, ContactForm } from '../components';
 
 const Contact = () => (
     <div className="page">
@@ -8,7 +8,7 @@ const Contact = () => (
         </div>
         <ContactHero />
         <ContactDetails />
-        {/* <ContactForm /> */}
+        <ContactForm />
     </div>
 )
 

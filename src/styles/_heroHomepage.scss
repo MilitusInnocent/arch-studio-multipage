@@ -1,0 +1,81 @@
+.hero__homepage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 200px;
+
+    &--backdrop {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: -1;
+
+        img {
+            filter: brightness(.75);
+            height: 100%; width: 100%;
+
+            &.active--timer, .active--click {
+                animation: flash 1200ms;
+
+                @keyframes flash {
+                    0% { opacity: .40 }
+                    100% { opacity: 1 }
+                }
+            }   
+        }  
+    }
+
+    &__textbox {
+        max-width: 55%; height: 350px;
+        margin: 150px;
+
+        & > * {
+            color: get-color(very-light-gray);
+            display: flex;
+        }
+
+        &--heading {
+            font-size: calc(3em + 2.2vw);
+            height: 55%;
+            align-items: flex-end;
+
+            @media screen and (min-width: 1950px) {
+                font-size: 5.33em;
+            }
+        }
+
+        &--subheading {
+            margin: 20px 0 10px;
+            height: 28%;
+        } 
+    }
+
+    &--pagination {
+        position: absolute;
+        bottom: 0; left: -60px;
+
+        .pagination__btn {
+            background-color: white;
+            color: get-color(medium-gray);
+            height: 60px; width: 60px;
+            border: 0;
+            font-family: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .35s;
+
+            &:hover {
+                background-color: get-color(very-light-gray);
+            }
+
+            &.active {
+                background-color: get-color(dark-blue);
+                color: white;
+            }
+        }
+
+        @media screen and (max-width: 755px) {
+            display: none;
+        }
+    }
+
+}

@@ -38,6 +38,11 @@ const HeroHomepage = () => {
         picEl.current.classList.remove('active--click');
     }, 6000)*/
 
+    const activeClick = () => {
+        picEl.current.classList.remove('active--timer')
+        picEl.current.classList.add('active--click')
+    }
+
 
     return (
         <div className="hero__homepage">
@@ -48,13 +53,23 @@ const HeroHomepage = () => {
                     alt={`${titles[current]} porfolio preview`}
                 />
             </div>
-            <div className="homepage__hero__textbox">
-                <h2 className="homepage__hero__textbox--heading">{titles[current]}</h2>
-                <p className="homepage__hero__textbox--subheading">{paragraphs[current]}</p>
+            <div className="hero__homepage__textbox">
+                <h2 className="hero__homepage__textbox--heading">{titles[current]}</h2>
+                <p className="hero__homepage__textbox--subheading">{paragraphs[current]}</p>
                 <Link to="/portfolio" className="btn">
                     <span>See Our Portfolio</span>
                     <img src={arrow} alt="Arrow to redirect to portfolio" />
                 </Link>
+            </div>
+            <div className="hero__homepage--pagination" onClick={activeClick}>
+                {ids.map((id, i) => (
+                    <button 
+                        className={`pagination__btn ${i === current && 'active'}`}
+                        onClick={() => setCurrent(i)} 
+                        key={i}>
+                            {id}
+                    </button>
+                ))}
             </div>
 
         </div>

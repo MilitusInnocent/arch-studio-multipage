@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+    color: get-color(medium-gray);
+
+    &__logo { margin-right: 75px }    
+
+    &__links {
+        width: 100%;
+    }
+}

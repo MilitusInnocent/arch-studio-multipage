@@ -4,7 +4,7 @@ import greenArrow from '../images/icons/icon-arrow-green.svg';
 
 const ContactForm = () => {
     const [validForm, setValidForm] = useState(false);
-    let formEl = useRef(null);
+    let formEl = useRef();
 
     function isEmpty() {
         let inputElements = [...formEl.current.children].slice(0, -1);

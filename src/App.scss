@@ -1,1 +1,15 @@
 @import 'styles/global';
+@import 'styles/theme';
+@import 'styles/typography';
+
+//In all pages
+@import 'styles/navbar';
+@import 'styles/pageLinks';
+@import 'styles/btn';
+@import 'styles/footer';
+
+//homepage
+@import 'styles/heroHomepage.scss';
+@import 'styles/welcome';
+@import 'styles/homepageCTA.scss';
+@import 'styles/featured';
