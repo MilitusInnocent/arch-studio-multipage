@@ -7,9 +7,23 @@
 @import 'styles/pageLinks';
 @import 'styles/btn';
 @import 'styles/footer';
+@import 'styles/pageDirectory';
 
 //homepage
 @import 'styles/heroHomepage.scss';
 @import 'styles/welcome';
 @import 'styles/homepageCTA.scss';
 @import 'styles/featured';
+
+//portfolio section
+@import 'styles/portfolioGrid';
+
+//about section
+@import 'styles/aboutHero';
+@import 'styles/heritage';
+@import 'styles/leaders';
+
+//contact section
+@import 'styles/contactHero';
+@import 'styles/contactDetails';
+@import 'styles/contactForm';
